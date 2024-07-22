@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awaaz e Jang - Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link href="contact.css" rel="stylesheet" type="text/css">
+</head>
+		    <style>
+        .navbar-dark .navbar-nav .nav-link {
+            color: #a16c43; /* Set text color to #a16c43 */
+        }
+        .btn-send {
+            background-color: #a16c43;
+            border-color: #a16c43;
+        }
+        .btn-send:hover {
+            background-color: #8e5f3d;
+            border-color: #8e5f3d;
+        }
+    </style>
+<body>
+    <!-- Navigation Bar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Awaaz e Jang Logo" width="100" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="watch.html">Watch Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<br><br><br><br>
+<br><br><br>
+    <!-- Contact Content -->
+    <section class="contact">
+        <div class="container text-center">
+			<br>
+            <h1>Contact Us</h1>
+			<br>
+            <form action="https://formspree.io/f/meojqpon" method="POST">
+				 <div class="form-group">
+					 <br>
+                    <input type="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+				<br>
+                <div class="form-group">
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                </div>
+				<br>
+                <div class="form-group">
+                    <textarea name="message" class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+				<br>
+                <button type="submit" class="btn btn-primary btn-send">Send</button>
+			
+            </form>
+        </div>
+		<br>
+    </section>
+<br>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Awaaz e Jang. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

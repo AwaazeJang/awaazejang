@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awaaz e Jang - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Custom CSS for navigation links */
+        .navbar-dark .navbar-nav .nav-link {
+            color: #a16c43; /* Set text color to #a16c43 */
+        }
+        /* Custom CSS for Watch Now button */
+        .btn-watch-now {
+            background-color: #a16c43;
+            border-color: #a16c43;
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1; /* Ensure button appears over the fade effect */
+        }
+        .btn-watch-now:hover {
+            background-color: #8e5f3d;
+            border-color: #8e5f3d;
+        }
+    .navbar-dark {
+            background-color: black; /* Set background color of the navbar to black */
+        }</style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Awaaz e Jang Logo" width="100" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="watch.html">Watch Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Timer Section -->
+    <section id="timer" class="jumbotron text-center position-relative">
+        <div class="display-4 days">00d</div>
+        <div class="display-1 time"></div>
+        <div class="fade-overlay"></div>
+        <!-- Watch Now Button -->
+        <div class="mt-4">
+            <a class="btn btn-lg btn-watch-now" href="watch.html">Watch Now</a>
+        </div>
+        <div class="container text-center py-4">
+            <p class="lead" style="font-family: Consolas, 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', Monaco, 'Courier New', monospace">
+                Awaken the spirit. Revive the rhythm. Awaaz e Jang
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Awaaz e Jang. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        // Timer script
+        const countDownDate = new Date("Aug 18, 2024 14:00:00").getTime();
+        const timer = document.getElementById("timer");
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            timer.querySelector('.days').textContent = days + "d";
+            timer.querySelector('.time').innerHTML = hours + "h " + minutes + "m " + seconds + "s";
+
+            if (distance < 0) {
+                clearInterval(x);
+                timer.innerHTML = "<h1>The documentary is live!</h1>";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

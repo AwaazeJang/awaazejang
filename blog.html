@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="about.css" rel="stylesheet" type="text/css">
+    <style>
+        .navbar-dark .navbar-nav .nav-link {
+            color: #a16c43; /* Set text color to #a16c43 */
+        }
+        .news-heading {
+            font-size: 2rem; /* Increase the font size of news headings */
+            font-weight: bold; /* Make the news headings bold */
+            color: black; /* Set text color to black */
+            margin-bottom: 20px; /* Add margin below the headings */
+        }
+        .navbar-dark {
+            background-color: black; /* Set background color of the navbar to black */
+        }
+        .news-content {
+            color: black; /* Set text color to black */
+            font-size: 1.1rem; /* Increase font size for better readability */
+        }
+        .news-section {
+            padding-top: 100px; /* Add padding to avoid overlap with navbar */
+        }
+        .timeline {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ddd;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline li {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        .timeline li:nth-child(odd) {
+            left: 0;
+        }
+        .timeline li:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .timeline-content:before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+        .timeline li:nth-child(odd) .timeline-content:before {
+            left: 100%;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #ddd;
+        }
+        .timeline li:nth-child(even) .timeline-content:before {
+            right: 100%;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #ddd transparent transparent;
+        }
+        .timeline li.in-view .timeline-content {
+            opacity: 1;
+            transform: none;
+        }
+        .timeline li .timeline-content {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="Awaaz e Jang Logo" width="100" height="auto">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="watch.html">Watch Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <br><br><br><br>
+<br><br><br><br><br><br>
+    <!-- News Section -->
+    <section class="container news-section">
+        <h1 class="text-center text-black">News</h1>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-content">
+                    <p class="news-heading">Aug 2024</p>
+                    <p class="news-content">Content related to August 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <p class="news-heading">Sep 2024</p>
+                    <p class="news-content">Content related to September 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <p class="news-heading">Oct 2024</p>
+                    <p class="news-content">Content related to October 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <p class="news-heading">Nov 2024</p>
+                    <p class="news-content">Content related to November 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <p class="news-heading">Dec 2024</p>
+                    <p class="news-content">Content related to December 2024. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Awaaz e Jang. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        (function () {
+            "use strict";
+
+            // define variables
+            var items = document.querySelectorAll(".timeline li");
+
+            // check if an element is in viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function callbackFunc() {
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                    }
+                }
+            }
+
+            // listen for events
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            window.addEventListener("scroll", callbackFunc);
+        })();
+    </script>
+</body>
+</html>

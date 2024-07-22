@@ -1,0 +1,86 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-right: 15px;
+}
+
+.navbar {
+    padding: 15px 30px;
+}
+
+.blog {
+    padding-top: 100px;
+}
+
+.vertical-timeline {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.vertical-timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.entry {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.entry::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid black;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.entry .date {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+
+.entry .content {
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    color: black;
+}
+
+.entry:nth-child(odd) {
+    left: 0;
+}
+
+.entry:nth-child(even) {
+    left: 50%;
+}
